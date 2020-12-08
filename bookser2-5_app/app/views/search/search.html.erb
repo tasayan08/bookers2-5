@@ -1,0 +1,8 @@
+<h2><%= "#{@model}s search for #{@content}"%></h2>
+<% @datas.each do |data| %>
+ <% if data.class == User %>
+  <%= render 'users/index', users: @users  %>
+ <% elsif data.class == Book %>
+  <%= render 'books/index', books: @books %>
+ <% end %>
+<% end %>
